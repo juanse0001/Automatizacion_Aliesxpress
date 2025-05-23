@@ -1,6 +1,6 @@
 package co.com.AutoFacebook.tasks;
 
-import co.com.AutoFacebook.userinterface.InicioFormulario;
+import co.com.AutoFacebook.userinterface.Warranty.InicioFormulario;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

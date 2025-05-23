@@ -1,8 +1,8 @@
 package co.com.AutoFacebook.stepsdefinitions;
 
-import co.com.AutoFacebook.models.WarrantyFormData;
+import co.com.AutoFacebook.models.Warranty.WarrantyFormData;
 import co.com.AutoFacebook.tasks.AbrirPaginaformulario;
-import co.com.AutoFacebook.tasks.FillWarrantyForm;
+import co.com.AutoFacebook.tasks.Warranty.FillWarrantyForm;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;

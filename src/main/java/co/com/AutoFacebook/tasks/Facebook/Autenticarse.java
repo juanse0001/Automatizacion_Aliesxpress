@@ -1,6 +1,6 @@
-package co.com.AutoFacebook.tasks;
+package co.com.AutoFacebook.tasks.Facebook;
 
-import co.com.AutoFacebook.models.CredencialesInicioSesion;
+import co.com.AutoFacebook.models.Facebook.CredencialesInicioSesion;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -9,7 +9,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 
 import java.util.List;
 
-import static co.com.AutoFacebook.userinterface.autenticacion.*;
+import static co.com.AutoFacebook.userinterface.Facebook.autenticacion.*;
 
 public class Autenticarse implements Task {
 

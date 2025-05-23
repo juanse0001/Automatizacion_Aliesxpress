@@ -14,9 +14,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class AddToCart implements Task {
 
-    private boolean irALaCesta = false; // Nueva variable para controlar si ir a la cesta
-
-    // Constructor para permitir la opción de ir a la cesta
+    private boolean irALaCesta = false;
     public AddToCart withGoToCartOption() {
         this.irALaCesta = true;
         return this;
@@ -31,7 +29,6 @@ public class AddToCart implements Task {
                         .forNoMoreThan(15).seconds(),
                 Click.on(BOTON_AGREGAR_CARRITO)
         );
-
         if (irALaCesta) {
             actor.attemptsTo(
                     Click.on(BUTTON_IR_A_LA_CESTA)
@@ -46,7 +43,6 @@ public class AddToCart implements Task {
         return instrumented(AddToCart.class);
     }
 
-    // Nuevo método estático para crear una instancia con la opción de ir a la cesta
     public static AddToCart theProductAndGoToCart() {
         return instrumented(AddToCart.class).withGoToCartOption();
     }

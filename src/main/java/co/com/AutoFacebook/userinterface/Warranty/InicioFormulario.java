@@ -1,4 +1,4 @@
-package co.com.AutoFacebook.userinterface;
+package co.com.AutoFacebook.userinterface.Warranty;
 
 import net.serenitybdd.core.pages.PageObject;
 

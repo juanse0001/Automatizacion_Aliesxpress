@@ -1,4 +1,4 @@
-package co.com.AutoFacebook.models;
+package co.com.AutoFacebook.models.Facebook;
 
 public class CredencialesInicioSesion {
 

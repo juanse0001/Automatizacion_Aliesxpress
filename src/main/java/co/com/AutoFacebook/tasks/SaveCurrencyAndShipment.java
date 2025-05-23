@@ -19,18 +19,17 @@ public class SaveCurrencyAndShipment implements Task {
         System.out.println("DEBUG: Intentando hacer clic para abrir el modal de configuración de moneda y envío.");
         actor.attemptsTo(
                 WaitUntil.the(LINK_OPEN_CURRENCY_SHIPMENT_MODAL, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(15).seconds(), // Espera que el link/botón para abrir el modal sea visible
+                        .forNoMoreThan(15).seconds(),
                 Click.on(LINK_OPEN_CURRENCY_SHIPMENT_MODAL)
         );
 
-        // 2. Esperar y hacer clic en el botón 'Guardar' dentro del modal
         System.out.println("DEBUG: Intentando hacer clic en el botón 'Guardar' dentro del modal.");
         actor.attemptsTo(
                 WaitUntil.the(SAVE_BUTTON_CURRENCY_SHIPMENT, WebElementStateMatchers.isVisible())
-                        .forNoMoreThan(10).seconds(), // Espera que el botón Guardar sea visible
+                        .forNoMoreThan(10).seconds(),
                 WaitUntil.the(SAVE_BUTTON_CURRENCY_SHIPMENT, WebElementStateMatchers.isEnabled())
-                        .forNoMoreThan(10).seconds(), // Espera que el botón Guardar esté habilitado
-                Click.on(SAVE_BUTTON_CURRENCY_SHIPMENT) // Haz clic en Guardar
+                        .forNoMoreThan(10).seconds(),
+                Click.on(SAVE_BUTTON_CURRENCY_SHIPMENT)
         );
         System.out.println("DEBUG: Se intentó hacer clic en el botón 'Guardar' del modal de configuración.");
     }

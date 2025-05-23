@@ -1,4 +1,4 @@
-package co.com.AutoFacebook.runners;
+package co.com.AutoFacebook.runners.Facebook;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;

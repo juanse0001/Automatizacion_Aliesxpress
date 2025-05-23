@@ -1,4 +1,4 @@
-package co.com.AutoFacebook.userinterface;
+package co.com.AutoFacebook.userinterface.Facebook;
 
 
 import net.serenitybdd.core.annotations.findby.By;

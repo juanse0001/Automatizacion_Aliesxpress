@@ -1,4 +1,4 @@
-package co.com.AutoFacebook.models;
+package co.com.AutoFacebook.models.Warranty;
 
 public class WarrantyFormData {
     private String company;

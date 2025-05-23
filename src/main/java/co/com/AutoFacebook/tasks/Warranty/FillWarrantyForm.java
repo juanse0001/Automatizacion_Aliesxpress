@@ -1,6 +1,6 @@
-package co.com.AutoFacebook.tasks;
+package co.com.AutoFacebook.tasks.Warranty;
 
-import co.com.AutoFacebook.models.WarrantyFormData;
+import co.com.AutoFacebook.models.Warranty.WarrantyFormData;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Enter;
@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.actions.Click;
 
 import java.util.List;
 
-import static co.com.AutoFacebook.userinterface.WarrantyFormPage.*;
+import static co.com.AutoFacebook.userinterface.Warranty.WarrantyFormPage.*;
 
 public class FillWarrantyForm implements Task {
     private final List<WarrantyFormData> formData;

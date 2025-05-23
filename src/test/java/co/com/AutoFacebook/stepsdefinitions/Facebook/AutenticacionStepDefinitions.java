@@ -1,6 +1,6 @@
-package co.com.AutoFacebook.stepsdefinitions;
+package co.com.AutoFacebook.stepsdefinitions.Facebook;
 
-import co.com.AutoFacebook.models.CredencialesInicioSesion;
+import co.com.AutoFacebook.models.Facebook.CredencialesInicioSesion;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;

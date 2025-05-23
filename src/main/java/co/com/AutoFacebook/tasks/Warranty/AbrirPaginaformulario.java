@@ -1,4 +1,4 @@
-package co.com.AutoFacebook.tasks;
+package co.com.AutoFacebook.tasks.Warranty;
 
 import co.com.AutoFacebook.userinterface.Warranty.InicioFormulario;
 import net.serenitybdd.screenplay.Actor;

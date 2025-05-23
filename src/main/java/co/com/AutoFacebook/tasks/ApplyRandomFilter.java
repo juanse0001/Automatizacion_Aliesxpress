@@ -39,7 +39,6 @@ public class ApplyRandomFilter implements Task {
                         .forNoMoreThan(15).seconds()
         );
     }
-
     public static ApplyRandomFilter onSearchResults() {
         return instrumented(ApplyRandomFilter.class);
     }

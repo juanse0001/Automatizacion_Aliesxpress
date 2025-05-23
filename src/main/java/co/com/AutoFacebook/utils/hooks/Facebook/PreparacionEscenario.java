@@ -1,4 +1,4 @@
-package co.com.AutoFacebook.utils.hooks;
+package co.com.AutoFacebook.utils.hooks.Facebook;
 
 import cucumber.api.java.Before;
 import net.serenitybdd.screenplay.actors.OnlineCast;

@@ -18,47 +18,37 @@ public class ProductSearchStepDefinitions {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Dado("^que \"([^\"]*)\" está en la página principal de AliExpress$")
-    public void openHomePage(String actorName) {
+    @Dado("^que \"([^\"]*)\" accede a la página principal de AliExpress$")
+    public void abrirPaginaPrincipal(String actorName) {
         theActorCalled(actorName).attemptsTo(
                 OpenAliExpress.homePage()
         );
     }
 
-    @Cuando("^Juan busca \"([^\"]*)\"$")
-    public void juanBusca(String product) {
+    @Cuando("^busca el producto \"([^\"]*)\", aplica un filtro aleatorio y selecciona uno de los resultados$")
+    public void buscarFiltrarYSeleccionarProducto(String producto) {
         theActorInTheSpotlight().attemptsTo(
-                SearchForProduct.called(product)
-        );
-    }
-
-    @Cuando("^aplica un filtro de resultados aleatorio$")
-    public void aplicaUnFiltroAleatorio() {
-        theActorInTheSpotlight().attemptsTo(
-                ApplyRandomFilter.onSearchResults()
-        );
-    }
-    @Entonces("^selecciona un producto$")
-    public void SeleccionarProducto() {
-        theActorInTheSpotlight().attemptsTo(
+                SearchForProduct.called(producto),
+                ApplyRandomFilter.onSearchResults(),
                 SelectFirstProduct.fromTheListExcludingPacksDeOfertas()
         );
     }
 
-    @Dado("^Que (?:.*) esta en los detalles del producto$")
-    public void juanEstaEnLosDetallesDelProducto() {
+    @Entonces("^se encuentra en la página de detalles del producto$")
+    public void estaEnDetalleDelProducto() {
+        // Este paso puede ser validación o simplemente informativo
         System.out.println("El actor está en los detalles del producto.");
     }
 
-    @Cuando("^guarda la configuración de moneda y envío si aparece el modal$") // Torsión ajustada
-    public void guardaLaConfiguracionDeMonedaYEnvioSiApareceElModal() {
+    @Entonces("^guarda la configuración de moneda y envío si aparece el modal$")
+    public void guardaConfiguracionMonedaYEnvio() {
         theActorInTheSpotlight().attemptsTo(
                 SaveCurrencyAndShipment.settings()
         );
     }
 
-    @Entonces("^agrega a la cesta$")
-    public void agregaALaCesta() {
+    @Entonces("^agrega el producto a la cesta$")
+    public void agregaProductoALaCesta() {
         theActorInTheSpotlight().attemptsTo(
                 AddToCart.theProductAndGoToCart()
         );
